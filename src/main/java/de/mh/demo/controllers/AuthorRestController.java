@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthorRestController {
     @Autowired
-    @Qualifier("myGreetingService")
+    @Qualifier("myGreetingService1")
     private GreetingService greetingService;
 
     @RequestMapping("/api/authors")
