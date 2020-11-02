@@ -8,6 +8,6 @@
 
     <bean id="greetingRestControllerBean" name="greetingRestControllerBean1"  class="de.mh.demo.services.MyGreetingService" >
         <property name="customName" value="from xml"></property>
-        <qualifier value="greetingRestControllerBean"></qualifier>
+
     </bean>
 </beans>
