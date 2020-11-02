@@ -12,16 +12,24 @@ public class GreetingRestController {
 
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
-    @Qualifier(value = "greetingRestControllerBean")
+    @Qualifier(value = "greetingRestControllerBean")//from xml
     public void setCallService(GreetingService callService) {
         this.callService = callService;
     }
 
+    @Autowired
+    @Qualifier("myGreetingService1")
+    private  GreetingService greetingService2;
 
     private GreetingService callService;
 
     @RequestMapping("/api/greeting")
     public String getGreet() {
         return callService.sayHello();
+    }
+
+    @RequestMapping("/api/v2/greeting")
+    public String getGreet2() {
+        return greetingService2.sayHello();
     }
 }

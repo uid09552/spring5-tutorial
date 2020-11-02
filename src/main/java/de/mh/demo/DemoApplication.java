@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 //@ComponentScan(basePackages = {"de.mh", "de.mh.demo"})
-@ImportResource("beans.xml")
+@ImportResource("classpath:beans.xml")
 public class DemoApplication {
 
     public static void main(String[] args) {
